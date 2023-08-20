@@ -46,6 +46,12 @@ public class Spectifications {
                 .build();
     }
 
+    public static ResponseSpecification responseDeleted204(){
+        return new ResponseSpecBuilder()
+                .expectStatusCode(204)
+                .build();
+    }
+
     public static void installSpec(RequestSpecification request, ResponseSpecification response) {
         RestAssured.requestSpecification = request;
         RestAssured.responseSpecification = response;
